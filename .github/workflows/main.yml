@@ -18,7 +18,7 @@ jobs:
           java-version: '21'
 
       - name: Gradle wrapper olustur
-        run: gradle wrapper --gradle-version 8.10
+        run: gradle wrapper --gradle-version 8.14
 
       - name: Mod'u derle
         run: ./gradlew build --no-daemon
