@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "gorselayarmod",
+  "version": "${version}",
+  "name": "Gorsel Ayar Modu",
+  "description": "C tusu = en dusuk gorsel ayarlar, V tusu = en yuksek gorsel ayarlar, X tusu = ozel gorsel profil (chunk 32, parlaklik full, bulut kapali, parcacik az, golge kapali, fps sinirsiz).",
+  "authors": ["Kullanici"],
+  "contact": {},
+  "license": "MIT",
+  "icon": null,
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.example.gorselayarmod.GorselAyarModClient"
+    ]
+  },
+  "mixins": [],
+  "depends": {
+    "fabricloader": ">=0.18.0",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
