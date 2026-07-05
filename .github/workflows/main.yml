@@ -1,0 +1,30 @@
+name: Build Mod
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Kaynak kodu indir
+        uses: actions/checkout@v4
+
+      - name: JDK 21 kur
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+
+      - name: Gradle wrapper olustur
+        run: gradle wrapper --gradle-version 8.10
+
+      - name: Mod'u derle
+        run: ./gradlew build --no-daemon
+
+      - name: Derlenen jar dosyasini yukle
+        uses: actions/upload-artifact@v4
+        with:
+          name: gorsel-ayar-mod-jar
+          path: build/libs/*.jar
